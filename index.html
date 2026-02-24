@@ -2,85 +2,133 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Instrucciones</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Líneas 3D</title>
 
 <style>
+
 body{
     margin:0;
-    background:black;
+    font-family: Arial, Helvetica, sans-serif;
+    background:black; /* fondo negro */
     color:white;
-    font-family:Arial, sans-serif;
-    text-align:center;
+    padding:95px 25px 60px 25px;
 }
 
-/* FLECHA */
-.flecha{
+/* subtitulo */
+.subtitulo{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:35px;
+    text-transform:uppercase;
+}
+
+/* pasos */
+.paso{
+    font-size:17px;
+    margin-bottom:28px;
+    line-height:1.4;
+    white-space:nowrap;
+}
+
+/* SOLO símbolo ⋮ */
+.puntitos{
+    font-weight:normal;
+}
+
+.simbolo{
+    font-weight:900;
+    font-size:24px;
+}
+
+/* flecha delgada */
+.flecha-arriba{
     position:absolute;
-    top:5px;   /* más arriba */
-    right:12px;
-    font-size:40px;
+    top:40px;   /* más arriba que antes */
+    right:15px;
+    font-size:70px;
+    font-weight:100;
     animation: mover 1s infinite alternate;
 }
 
 @keyframes mover{
-    from{ transform: translateY(0px); }
-    to{ transform: translateY(-8px); }
+    from{ transform: translateY(0px);}
+    to{ transform: translateY(18px);}
 }
 
-/* TITULO */
-.titulo{
-    margin-top:60px;
-    font-size:24px;
-    font-weight:bold;
+/* icono navegador */
+.icono-img{
+    width:22px;
+    vertical-align:middle;
+    margin:0 6px;
 }
 
-/* TEXTO */
-.texto{
-    margin-top:20px;
-    font-size:18px;
+/* mano */
+.mano{
+    font-size:50px;
+    display:block;
+    text-align:center;
+    margin-top:8px;
 }
 
-/* SIMBOLO 3 PUNTITOS */
-.simbolo{
-    font-size:28px;
-    font-weight:bold;
+/* whatsapp */
+.whatsapp-container{
+    text-align:center;
+    margin-top:15px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-    margin-top:25px;
+.whatsapp-icono{
+    width:160px;
+    animation: pulso 2s infinite;
+}
+
+@keyframes pulso{
+    0%{ transform: scale(1);}
+    50%{ transform: scale(1.08);}
+    100%{ transform: scale(1);}
+}
+
+.whatsapp-texto{
+    margin-top:6px;
     font-size:20px;
     font-weight:bold;
-    animation: latido 1.2s infinite;
+    text-transform:capitalize;
 }
 
-@keyframes latido{
-    0%{ transform: scale(1); }
-    50%{ transform: scale(1.1); }
-    100%{ transform: scale(1); }
+a{
+    text-decoration:none;
+    color:white;
 }
+
 </style>
-
 </head>
 
 <body>
 
-<div class="flecha">↗</div>
-
-<div class="titulo">
+<div class="subtitulo">
 SIGUE ESTOS PASOS
 </div>
 
-<div class="texto">
-toca arriba los tres puntitos <span class="simbolo">⋮</span>
+<div class="paso">
+1️⃣ Toca arriba los 3 puntitos <span class="simbolo">⋮</span>
 </div>
 
-<div class="texto">
-Abrir en el navegador
+<div class="flecha-arriba">↑</div>
+
+<div class="paso">
+2️⃣ Presiona <img src="abrir-navegador.png" class="icono-img"> Abrir en el navegador
 </div>
 
-<div class="whatsapp">
-Abrir en WhatsApp
+<div class="paso">
+3️⃣ Ahora toca aquí
+<span class="mano">👇</span>
+</div>
+
+<div class="whatsapp-container">
+<a href="https://api.whatsapp.com/send?phone=51956255984&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicio%20de%20despiece" target="_blank">
+<img class="whatsapp-icono" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<div class="whatsapp-texto">WhatsApp</div>
+</a>
 </div>
 
 </body>
