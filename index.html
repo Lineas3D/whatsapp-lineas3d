@@ -10,71 +10,85 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#1f1f1f; /* plomo oscuro */
+    background:#5B5B5B;
     color:white;
-    padding:120px 30px 80px 30px;
+    padding:100px 25px 60px 25px;
 }
 
-/* Subtítulo */
+/* SUBTITULO */
 .subtitulo{
-    font-size:28px;
+    font-size:26px;
     font-weight:bold;
-    margin-bottom:50px;
-}
-
-/* Pasos */
-.paso{
-    font-size:22px;
     margin-bottom:40px;
-    line-height:1.6;
+    text-transform:uppercase;
 }
 
-/* Flecha superior */
+/* PASOS */
+.paso{
+    font-size:18px;
+    margin-bottom:30px;
+    line-height:1.4;
+    white-space:nowrap;
+}
+
+/* 3 PUNTITOS */
+.puntitos{
+    font-weight:900;
+    font-size:22px;
+}
+
+/* FLECHA */
 .flecha-arriba{
-    position:fixed;
-    top:10px;
-    right:25px;
-    font-size:70px; /* más larga */
+    position:absolute;
+    top:78px;
+    right:30px;
+    font-size:60px;
     animation: mover 1s infinite alternate;
 }
 
 @keyframes mover{
     from{ transform: translateY(0px);}
-    to{ transform: translateY(18px);}
+    to{ transform: translateY(15px);}
 }
 
-/* Icono navegador */
+/* ICONO NAVEGADOR */
 .icono-img{
-    width:26px;
+    width:24px;
     vertical-align:middle;
-    margin-right:8px;
+    margin:0 6px;
 }
 
-/* Mano */
+/* MANO */
 .mano{
     font-size:55px;
     display:block;
-    margin-top:15px;
+    text-align:center;
+    margin-top:10px;
 }
 
-/* Espacio grande antes del WhatsApp */
-.espacio-grande{
-    margin-top:120px;
-}
-
-/* WhatsApp estilo app */
+/* WHATSAPP */
 .whatsapp-container{
     text-align:center;
-    margin-top:150px;
+    margin-top:30px;
 }
 
 .whatsapp-icono{
-    width:85px;
+    width:170px;
+    animation: vibrar 1.5s infinite;
+}
+
+@keyframes vibrar{
+    0%{ transform: translateX(0);}
+    20%{ transform: translateX(-2px);}
+    40%{ transform: translateX(2px);}
+    60%{ transform: translateX(-2px);}
+    80%{ transform: translateX(2px);}
+    100%{ transform: translateX(0);}
 }
 
 .whatsapp-texto{
-    margin-top:10px;
-    font-size:20px;
+    margin-top:8px;
+    font-size:22px;
 }
 
 a{
@@ -87,23 +101,22 @@ a{
 
 <body>
 
+<div class="subtitulo">
+SIGUE ESTOS PASOS:
+</div>
+
+<div class="paso">
+1️⃣ Toca arriba los <span class="puntitos">3 PUNTITOS ⋮</span>
+</div>
+
 <div class="flecha-arriba">⬆️</div>
 
-<div class="subtitulo">
-Sigue estos pasos
+<div class="paso">
+2️⃣ Presiona <img src="abrir-navegador.png" class="icono-img"> <b>ABRIR EN EL NAVEGADOR</b>
 </div>
 
 <div class="paso">
-1️⃣ Toca arriba los 3 puntitos ⋮
-</div>
-
-<div class="paso">
-2️⃣ <img src="abrir-navegador.png" class="icono-img">
-Presiona <b>Abrir en el navegador</b>
-</div>
-
-<div class="paso">
-3️⃣ Ahora toca el botón
+3️⃣ Ahora toca aquí
 <span class="mano">👇</span>
 </div>
 
