@@ -13,51 +13,50 @@ body{
     text-align:center;
 }
 
-/* TÍTULO */
-.titulo{
-    margin-top:40px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-/* TEXTO GENERAL */
-.texto{
-    margin-top:20px;
-    font-size:16px;
-}
-
-/* SIMBOLO 3 PUNTOS */
-.simbolo{
-    font-size:26px;
-    font-weight:bold;
-}
-
 /* FLECHA */
 .flecha{
     position:absolute;
-    top:5px;
-    right:5px;
-    font-size:30px;
-    font-weight:lighter;
-    animation: mover 1.2s infinite alternate;
+    top:5px;   /* más arriba */
+    right:12px;
+    font-size:40px;
+    animation: mover 1s infinite alternate;
 }
 
 @keyframes mover{
     from{ transform: translateY(0px); }
-    to{ transform: translateY(-6px); }
+    to{ transform: translateY(-8px); }
+}
+
+/* TITULO */
+.titulo{
+    margin-top:60px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* TEXTO */
+.texto{
+    margin-top:20px;
+    font-size:18px;
+}
+
+/* SIMBOLO 3 PUNTITOS */
+.simbolo{
+    font-size:28px;
+    font-weight:bold;
 }
 
 /* WHATSAPP */
 .whatsapp{
     margin-top:25px;
-    font-size:18px;
+    font-size:20px;
     font-weight:bold;
-    animation: zoom 1.5s infinite;
+    animation: latido 1.2s infinite;
 }
 
-@keyframes zoom{
+@keyframes latido{
     0%{ transform: scale(1); }
-    50%{ transform: scale(1.08); }
+    50%{ transform: scale(1.1); }
     100%{ transform: scale(1); }
 }
 </style>
@@ -81,7 +80,7 @@ Abrir en el navegador
 </div>
 
 <div class="whatsapp">
-abrir en WhatsApp
+Abrir en WhatsApp
 </div>
 
 </body>
