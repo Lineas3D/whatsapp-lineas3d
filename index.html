@@ -6,104 +6,113 @@
 <title>Líneas 3D</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f2f2f2;
-    text-align:center;
-    padding:95px 20px 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#1f1f1f; /* plomo oscuro */
+    color:white;
+    padding:120px 30px 80px 30px;
 }
 
-h1{
-    font-size:24px;
-    margin-bottom:25px;
-}
-
-.pasos{
-    font-size:20px;
-    line-height:1.8;
-    text-align:left;
-    max-width:380px;
-    margin:0 auto;
-}
-
-.numero{
+/* Subtítulo */
+.subtitulo{
+    font-size:28px;
     font-weight:bold;
-    display:inline-block;
-    width:30px;
+    margin-bottom:50px;
 }
 
-.icono-img{
-    width:22px;
-    vertical-align:middle;
-    margin-left:6px;
+/* Pasos */
+.paso{
+    font-size:22px;
+    margin-bottom:40px;
+    line-height:1.6;
 }
 
-.flecha{
+/* Flecha superior */
+.flecha-arriba{
     position:fixed;
-    top:18px;
-    right:18px;
-    font-size:48px;
+    top:10px;
+    right:25px;
+    font-size:70px; /* más larga */
     animation: mover 1s infinite alternate;
 }
 
 @keyframes mover{
     from{ transform: translateY(0px);}
-    to{ transform: translateY(12px);}
+    to{ transform: translateY(18px);}
 }
 
-.boton{
-    margin-top:45px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    background:#25D366;
-    color:white;
-    padding:20px 32px;
-    font-size:22px;
-    border-radius:50px;
+/* Icono navegador */
+.icono-img{
+    width:26px;
+    vertical-align:middle;
+    margin-right:8px;
+}
+
+/* Mano */
+.mano{
+    font-size:55px;
+    display:block;
+    margin-top:15px;
+}
+
+/* Espacio grande antes del WhatsApp */
+.espacio-grande{
+    margin-top:120px;
+}
+
+/* WhatsApp estilo app */
+.whatsapp-container{
+    text-align:center;
+    margin-top:150px;
+}
+
+.whatsapp-icono{
+    width:85px;
+}
+
+.whatsapp-texto{
+    margin-top:10px;
+    font-size:20px;
+}
+
+a{
     text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    color:white;
 }
 
-.logo-wa{
-    width:28px;
-    height:28px;
-}
 </style>
 </head>
 
 <body>
 
-<div class="flecha">⬆️</div>
+<div class="flecha-arriba">⬆️</div>
 
-<h1>⚠️ Para abrir WhatsApp</h1>
+<div class="subtitulo">
+Sigue estos pasos
+</div>
 
-<div class="pasos">
+<div class="paso">
+1️⃣ Toca arriba los 3 puntitos ⋮
+</div>
 
-<div><span class="numero">1️⃣</span> Toca los <b>3 puntitos ⋮</b> arriba</div>
-<br>
-<div>
-<span class="numero">2️⃣</span>
+<div class="paso">
+2️⃣ <img src="abrir-navegador.png" class="icono-img">
 Presiona <b>Abrir en el navegador</b>
-<img src="abrir-navegador.png" class="icono-img">
-</div>
-<br>
-<div><span class="numero">3️⃣</span> Ahora toca el botón 👇</div>
-
 </div>
 
-<a class="boton"
-href="https://api.whatsapp.com/send?phone=51956255984&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicio%20de%20despiece"
-target="_blank">
+<div class="paso">
+3️⃣ Ahora toca el botón
+<span class="mano">👇</span>
+</div>
 
-<img class="logo-wa" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-
-WhatsApp
-
+<div class="whatsapp-container">
+<a href="https://api.whatsapp.com/send?phone=51956255984&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicio%20de%20despiece" target="_blank">
+<img class="whatsapp-icono" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<div class="whatsapp-texto">WhatsApp</div>
 </a>
+</div>
 
 </body>
 </html>
