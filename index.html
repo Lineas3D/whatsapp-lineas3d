@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Líneas 3D - WhatsApp</title>
+<title>Líneas 3D</title>
 
 <style>
 body{
@@ -11,66 +11,97 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     background:#f2f2f2;
     text-align:center;
-    padding:30px 20px;
+    padding:80px 20px 40px 20px;
 }
 
 h1{
-    font-size:26px;
-    margin-bottom:10px;
+    font-size:24px;
+    margin-bottom:20px;
 }
 
 .pasos{
     font-size:20px;
-    line-height:1.6;
-    margin-top:20px;
+    line-height:1.7;
+    text-align:left;
+    max-width:380px;
+    margin:0 auto;
 }
 
-.boton{
-    margin-top:40px;
+.numero{
+    font-weight:bold;
     display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:20px 35px;
-    font-size:22px;
-    border-radius:12px;
-    text-decoration:none;
+    width:30px;
+}
+
+.trespuntos{
+    font-size:26px;
     font-weight:bold;
 }
 
+.icono-navegador{
+    font-size:22px;
+}
+
 .flecha{
-    font-size:40px;
     position:fixed;
     top:15px;
-    right:20px;
+    right:15px;
+    font-size:45px;
     animation: mover 1s infinite alternate;
 }
 
 @keyframes mover{
     from{ transform: translateY(0px);}
-    to{ transform: translateY(10px);}
+    to{ transform: translateY(12px);}
 }
 
+.boton{
+    margin-top:40px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:#25D366;
+    color:white;
+    padding:18px 28px;
+    font-size:22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-wa{
+    width:26px;
+    height:26px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="flecha">↗️</div>
+<div class="flecha">⬆️</div>
 
-<h1>⚠️ IMPORTANTE</h1>
+<h1>⚠️ Para abrir WhatsApp</h1>
 
 <div class="pasos">
-Si el botón no abre WhatsApp:<br><br>
 
-1️⃣ Toca los <b>3 puntitos arriba</b><br>
-2️⃣ Presiona <b>"Abrir en el navegador"</b><br>
-3️⃣ Luego vuelve aquí y toca el botón verde 👇
+<div><span class="numero">1️⃣</span> Toca los <b>3 puntitos ⋮</b> arriba</div>
+<br>
+<div><span class="numero">2️⃣</span> Presiona <b>Abrir en el navegador</b> 🌐</div>
+<br>
+<div><span class="numero">3️⃣</span> Luego vuelve aquí y toca el botón</div>
+
 </div>
 
 <a class="boton"
 href="https://api.whatsapp.com/send?phone=51956255984&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicio%20de%20despiece"
 target="_blank">
-💬 ABRIR WHATSAPP
+
+<img class="logo-wa" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+WhatsApp
+
 </a>
 
 </body>
